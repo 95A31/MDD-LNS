@@ -1,0 +1,16 @@
+{
+    "id": "yuck",
+    "name": "Yuck",
+    "description": "Local-search solver with FlatZinc interface",
+    "version": "20200923",
+    "executable": "./bin/yuck",
+    "mznlib": "./mzn/lib",
+    "tags": ["cp", "int", "set", "restart"],
+    "stdFlags": ["-p", "-r"],
+    "supportsMzn": false,
+    "supportsFzn": true,
+    "needsSolns2Out": true,
+    "needsMznExecutable": false,
+    "needsStdlibDir": false,
+    "isGUIApplication": false
+}
