@@ -6,7 +6,6 @@ project(mdd-lns LANGUAGES CXX)
 enable_language(CUDA)
 set(CMAKE_CUDA_STANDARD 17)
 set(CMAKE_CUDA_STANDARD_REQUIRED ON)
-set(CMAKE_CUDA_ARCHITECTURES 86)
 string(APPEND CMAKE_CUDA_FLAGS " --expt-extended-lambda")
 set(CMAKE_CUDA_SEPARABLE_COMPILATION ON)
 string(APPEND CMAKE_CUDA_FLAGS " -Xcompiler -Wall")
@@ -46,8 +45,6 @@ set(SOURCES
     src/DecisionDiagram/StateMetadata.cuh
     src/LargeNeighborhoodSearch/StatesPriorityQueue.cuh
     src/DecisionDiagram/Context.h
-    include/Utils/Algorithms.cuh
-    include/Containers/Pair.cuh
     src/Options.h
     src/DynamicProgramming/CTWPState.cuh
     src/DynamicProgramming/SOPState.cuh

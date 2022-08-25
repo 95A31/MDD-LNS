@@ -41,4 +41,9 @@ done
 buildDir=$2
 rm -rf $buildDir 2> /dev/null
 mkdir -p $buildDir
-cmake -B $buildDir -D CMAKE_BUILD_TYPE=$buildType
+
+computeCapability=$(nvidia-smi --query-gpu=compute_cap --format=csv,noheader | tr -d ".")
+cmake -B $buildDir \
+      -D CMAKE_CUDA_ARCHITECTURES=$computeCapability \
+      -D CMAKE_BUILD_TYPE=$buildType
+
